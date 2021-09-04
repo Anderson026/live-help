@@ -1,0 +1,10 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+}
+
+img {
+  width: 80%;
+  height: 35%;
+}

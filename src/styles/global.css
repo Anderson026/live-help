@@ -1,0 +1,15 @@
+:root {
+  --orange: #FA7F00;
+  --black: #1F2937;
+  --white: #F9FAFB;
+  --blue: #1F6A8F;
+
+  font-size: 62.5%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}

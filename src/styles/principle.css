@@ -1,0 +1,39 @@
+
+main {
+  max-width: 640px;
+  height: 640px;
+  background-color: var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  background-color: var(--white);
+  width: 90%;
+  height: 90%;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  font-size: 2.4rem;
+  color: var(--black);
+}
+
+.information {
+  height: 72%;
+  width: 80%;
+  border: 2px solid var(--orange);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.information p {
+  color: var(--black);
+  font-size: 1.2rem;
+}

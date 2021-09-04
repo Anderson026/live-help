@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// importando o css global
+import "./styles/global.css";
+// importando o banco de dados
+import "./services/firebase";
 
 ReactDOM.render(
   <React.StrictMode>
