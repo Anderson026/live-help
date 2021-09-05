@@ -1,10 +1,9 @@
 
-import { Link } from "react-router-dom";
-import { ButtonMenuMobile } from "../components/ButtomMenuMobile";
 import { ButtonSend } from "../components/ButtonSend";
-import { ButtonCancel } from "../components/ButtonCancel";
-import "../styles/principle.css";
 import { useState } from "react/cjs/react.development";
+import buttonMenuMobile from "../assets/buttonMenuMobile.svg";
+import "../styles/principle.css";
+import { Link } from "react-router-dom";
 
 export function Principle() {
   // guardando o estado do que é digitado no input
@@ -21,14 +20,35 @@ export function Principle() {
         alert("Senha Inválida!");
     }
   }
-
-  function hidetModal() {
+  // função para mostrar o menu mobile
+  function hideOrShowMenu() {
+    let divMenu = document.querySelector(".div-menu");
+    divMenu.classList.toggle("active");
+  }
+  // função para mostar o modal
+  function hideOrShowtModal() {
     let modal = document.querySelector(".modal");
-    modal.classList.add("active");
+    modal.classList.toggle("active");
   }
 
   return (
     <main>
+      {/* menu mobile */}
+      <div className="div-menu">
+        <div className="div-logo">Logo</div>
+        <div className="div-buttons">
+          <Link to="/pagepdvversions">
+            <button>Dowloads</button>
+          </Link>
+          <button onClick={hideOrShowtModal}>Passwords</button>
+          <button onClick={hideOrShowtModal}>Acessar Versões do PDV</button>
+        </div>
+        <div className="div-footer">
+          <footer>Anderson Ferreira 2021</footer>
+        </div>
+      </div>
+      
+      {/* contedúdo da página */}
       <div className="content">
         <h1 className="header">Novidades da Versão 1.0.0</h1>
         <div className="information">
@@ -52,15 +72,15 @@ export function Principle() {
                   onChange={event => setPassword(event.target.value)}
                 />
                 <ButtonSend />
-                <button className="button-cancel" onClick={hidetModal}>Cancelar</button>
+                <button className="button-cancel" onClick={hideOrShowtModal}>Cancelar</button>
               </form>
             </div>
           </div>
         </div>
       </div>
-      <Link to="/secret">
-        <ButtonMenuMobile />
-      </Link>
+      <button className="buttonMenuMobile" onClick={hideOrShowMenu}>
+        <img src={buttonMenuMobile} alt="Icone de menu" />
+      </button>
     </main>
   );
 }

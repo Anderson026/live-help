@@ -6,8 +6,59 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+/* início menu */
+.div-menu {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  display: none;
+
+  background-color: var(--blue);
 }
 
+.div-logo {
+  background-color: var(--white);
+  width: 80%;
+  height: 100px;
+  border-radius: 8px;
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-buttons {
+  width: 80%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.div-buttons button {
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  color: var(--orange);
+  border: 2px solid var(--orange);
+  background-color: var(--white);
+  font-size: 1.4rem;
+}
+
+.div-footer {
+  width: 286px;
+  text-align: center;
+  color: var(--white);
+  font-size: 1.4rem;
+}
+/* fim menu */
+/* início content */
 .content {
   background-color: var(--white);
   width: 90%;
@@ -37,7 +88,8 @@ main {
   color: var(--black);
   font-size: 1.2rem;
 }
-
+/* fim content */
+/* início do modal */
 .modal {
   position: absolute;
   top: 0;
@@ -48,13 +100,15 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
 }
 
 .div-password {
   width: 80%;
   height: 40%;
   background-color: var(--white);
+  border-radius: 8px;
 }
 
 .div-password h1 {
@@ -65,8 +119,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: space-around;
+    gap: 8px;
   }
 
   .form input {
@@ -87,5 +141,25 @@ main {
   }
 
   .active {
-    display: none;
+    display: inline-flex;
+  }
+
+  /* fim do modal */
+
+  .buttonMenuMobile {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .buttonMenuMobile img {
+    width: 60px;
+    height: 60px
   }
