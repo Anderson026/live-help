@@ -7,7 +7,7 @@ export function Passwords() {
   let day = date.getDate();
   let month = date.getMonth() + 1;
   let year = date.getFullYear();
- 
+
   let calculatePasswordPosto = (day + month + year) - 2000;
   let calculatePasswordLoja = (hour + day + month + year) - 2000;
   let calculatePasswordConfig = (hour + day + month + year) - 75;
@@ -18,12 +18,17 @@ export function Passwords() {
   const [passwordConfig, setPasswordConfig] = useState(calculatePasswordConfig);
   const [passwordCbc, setPasswordCbc] = useState(calculatePasswordCbc);
 
-  let updatePasswords = window.addEventListener("click", () =>{
-    setPasswordPosto(calculatePasswordPosto);
-    setPasswordLoja(calculatePasswordLoja);
-    setPasswordConfig(calculatePasswordConfig);
-    setPasswordCbc(calculatePasswordCbc);
-  })
+  function updatePasswords() {
+
+    let update = window.addEventListener("click", () =>{
+      setPasswordPosto(calculatePasswordPosto);
+      setPasswordLoja(calculatePasswordLoja);
+      setPasswordConfig(calculatePasswordConfig);
+      setPasswordCbc(calculatePasswordCbc);
+    })
+    return update;
+  }
+
 
 
   return (
@@ -36,7 +41,7 @@ export function Passwords() {
         <p>Senha do CBC 2k9: {passwordCbc}</p>
         <p>Senha do config da Getcard: secnas256</p>
         <p>Senha do Gsurf: Live202108</p>
-        <button>{updatePasswords} Atualizar Senhas</button>
+        <button onClick={updatePasswords}>Atualizar Senhas</button>
       </div>
     </>
   );

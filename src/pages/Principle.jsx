@@ -1,9 +1,10 @@
 
 import { ButtonSend } from "../components/ButtonSend";
 import { useState } from "react/cjs/react.development";
-import buttonMenuMobile from "../assets/buttonMenuMobile.svg";
-import "../styles/principle.css";
 import { Link } from "react-router-dom";
+import "../styles/principle.css";
+// import { ButtonMenuMobile } from "../components/ButtomMenuMobile";
+import logoLive from "../assets/logo.png";
 
 export function Principle() {
   // guardando o estado do que é digitado no input
@@ -20,6 +21,7 @@ export function Principle() {
         alert("Senha Inválida!");
     }
   }
+  
   // função para mostrar o menu mobile
   function hideOrShowMenu() {
     let divMenu = document.querySelector(".div-menu");
@@ -35,13 +37,18 @@ export function Principle() {
     <main>
       {/* menu mobile */}
       <div className="div-menu">
-        <div className="div-logo">Logo</div>
+        <div className="div-logo"><img className="logo-img" src={logoLive} alt="logo da Live Sistemas" /></div>
         <div className="div-buttons">
           <Link to="/pagepdvversions">
-            <button>Dowloads</button>
+            <div>Dowloads</div>
           </Link>
-          <button onClick={hideOrShowtModal}>Passwords</button>
-          <button onClick={hideOrShowtModal}>Acessar Versões do PDV</button>
+          <Link to="/passwords">
+            <div>Passwords</div>
+          </Link>
+          <Link to="/tutorials/01-cadastrodecolaboradores">
+            <div>Tutoriais</div>
+          </Link>
+          <div onClick={hideOrShowtModal}>Acessar Versões do PDV</div>
         </div>
         <div className="div-footer">
           <footer>Anderson Ferreira 2021</footer>
@@ -76,10 +83,17 @@ export function Principle() {
               </form>
             </div>
           </div>
+          {/* fim do modal */}
         </div>
       </div>
       <button className="buttonMenuMobile" onClick={hideOrShowMenu}>
-        <img src={buttonMenuMobile} alt="Icone de menu" />
+        {/* <img id="btnImg" src={buttonMenuMobile} alt="Icone de menu" /> */}
+        <input type="checkbox" id="checkbox-menu" />
+        <label onClick={hideOrShowMenu} htmlFor="checkbox-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
       </button>
     </main>
   );

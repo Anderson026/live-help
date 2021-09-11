@@ -30,8 +30,8 @@ function App() {
         <Route path="/" exact component={Principle} />
         <Route path="/passwords" exact component={Passwords} />
         {/* rotas de cadastros de arquivos de download */}
-        <Route path="/secret/pdvversions" exact component={InsertPdvVersions} />
-        <Route path="/secret/instalationfiles" exact component={InsertInstallationFiles} />
+        <Route path="/secret/insertpdvversions" exact component={InsertPdvVersions} />
+        <Route path="/secret/insertinstalationfiles" exact component={InsertInstallationFiles} />
         <Route path="/secret/insertautomationfiles" exact component={InsertAutomationFiles} />
         <Route path="/secret/insertprintersdrivers" exact component={InsertPrintersDrivers} />
         <Route path="/secret/insertteffiles" exact component={InsertTefFiles} />
