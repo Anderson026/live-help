@@ -85,7 +85,7 @@ export function InsertPrintersDrivers() {
       <div className="content">
         <h1 className="header">Cadastro de Drivers de Impressoras não Fiscal</h1>
         <div className="information">
-          <div className="form">
+          <div className="form-cad">
             <form onSubmit={handleSubmit}>
               <label>
                 Link:

@@ -85,7 +85,7 @@ export function InsertChangeLog() {
       <div className="content">
         <h1 className="header">Informe as Novidades da Versão</h1>
         <div className="information">
-          <div className="form">
+          <div className="form-cad">
             <form onSubmit={handleSubmit}>
               <label>
                 Descrição:

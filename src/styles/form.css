@@ -1,5 +1,5 @@
 
-.form {
+.form-cad {
   width: 80%;
   height: 95%;
   border-radius: 8px;
@@ -10,7 +10,7 @@
   box-sizing: border-box;
 }
 
-.form form {
+.form-cad form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,7 +18,14 @@
   gap: 5px;
 }
 
-.form label {
+.form-cad label {
   font-size: 1.2rem;
   font-weight: bold;
+}
+
+.form-cad input {
+  width: 256px;
+  height: 50px;
+  border-radius: 8px;
+  box-sizing: border-box;
 }

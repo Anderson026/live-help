@@ -85,7 +85,7 @@ export function InsertAutomationFiles() {
       <div className="content">
         <h1 className="header">Cadastro de Arquivos de Automação de Bombas</h1>
         <div className="information">
-          <div className="form">
+          <div className="form-cad">
             <form onSubmit={handleSubmit}>
               <label>
                 Link:

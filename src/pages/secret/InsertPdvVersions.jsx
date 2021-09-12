@@ -83,7 +83,7 @@ export function InsertPdvVersions() {
       <div className="content">
         <h1 className="header">Cadastro de Verões do PDV</h1>
         <div className="information">
-          <div className="form">
+          <div className="form-cad">
             <form onSubmit={handleSubmit}>
               <label>
                 Link:
