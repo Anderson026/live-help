@@ -85,14 +85,21 @@ function hideOrShowtModal() {
       </div>
 
       <div className="content">
-        <h1>Passwords</h1>
-        <p>Senha do Live Posto: {passwordPosto}</p>
-        <p>Senha do Live Loja: {passwordLoja}</p>
-        <p>Senha do config do PDV: {passwordConfig}</p>
-        <p>Senha do CBC 2k9: {passwordCbc}</p>
-        <p>Senha do config da Getcard: secnas256</p>
-        <p>Senha do Gsurf: Live202108</p>
-        <button onClick={updatePasswords}>Atualizar Senhas</button>
+        <h1 className="header">Passwords</h1>
+        <div className="information">
+          <div className="password-container">
+            <div className="passwords-styles"><p>Senha do Live Posto: <span>{passwordPosto}</span></p></div>
+            <div className="passwords-styles"><p>Senha do Live Loja: <span>{passwordLoja}</span></p></div>
+            <div className="passwords-styles"><p>Senha do config do PDV: <span>{passwordConfig}</span></p></div>
+            <div className="passwords-styles"><p>Senha do CBC 2k9: <span>{passwordCbc}</span></p></div>
+            <div className="passwords-styles"><p>Senha do config da Getcard: <span>secnas256</span></p></div>
+            <div className="passwords-styles"><p>Senha do Gsurf: <span>Live202108</span></p></div>
+            
+            {/* <div className="passwords-styles"> */}
+              <button className="buttonUpdate" onClick={updatePasswords}>Atualizar Senhas</button>
+            {/* </div> */}
+          </div>
+        </div>
       </div>
 
       {/* modal para informar a senha para redirecionamento para a página de versões do pdv */}
