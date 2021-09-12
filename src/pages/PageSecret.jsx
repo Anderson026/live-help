@@ -120,7 +120,7 @@ export function PageSecret() {
       <button className="buttonMenuMobile" onClick={hideOrShowMenu}>
         {/* <img id="btnImg" src={buttonMenuMobile} alt="Icone de menu" /> */}
         <input type="checkbox" id="checkbox-menu" />
-        <label onClick={hideOrShowMenu} htmlFor="checkbox-menu">
+        <label className="labelButton" onClick={hideOrShowMenu} htmlFor="checkbox-menu">
           <span></span>
           <span></span>
           <span></span>

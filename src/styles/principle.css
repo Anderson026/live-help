@@ -195,15 +195,16 @@ main {
     opacity: 0;
   }
 
-  label{
+  .labelButton{
     cursor: pointer;
     position: relative;
     display: block;
     height: 22px;
     width: 36px;
+    font-size: 1.2rem;
   }
   
-  label span{
+  .labelButton span{
     position: absolute;
     display: block;
     height: 5px;
