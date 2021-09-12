@@ -1,12 +1,34 @@
 
 import { ButtonSend } from "../components/ButtonSend";
-import { useState } from "react/cjs/react.development";
+import { useState, useEffect } from "react/cjs/react.development";
 import { Link } from "react-router-dom";
 import "../styles/principle.css";
-// import { ButtonMenuMobile } from "../components/ButtomMenuMobile";
 import logoLive from "../assets/logo.png";
+import firebase from "../services/firebase";
 
 export function Principle() {
+
+  // guardando e alterando os dados no estado
+  const [listFiles, setListFiles] = useState([]);
+  // colocando o firebase dentro de uma variável
+  const ref = firebase.firestore().collection("change_log");
+  // função para pegar todos os dados do banco e armazenar dentro de um array para e por fim salvar no estado
+  async function getFiles() {
+    ref.onSnapshot((querySnapshot) => {
+      const docs = [];
+      querySnapshot.forEach(doc => {
+        docs.push({ ...doc.data(), id: doc.id });
+      });
+      setListFiles(docs);
+
+    });
+  }
+  // hook para execupar a função getfiles
+  useEffect(() => {
+    getFiles();
+  }, []);
+
+
   // guardando o estado do que é digitado no input
   const [password, setPassword] = useState("");
   // função para redirecionar para as páginas de pdv versões ou passwords
@@ -59,17 +81,28 @@ export function Principle() {
       
       {/* contedúdo da página */}
       <div className="content">
-        <h1 className="header">Novidades da Versão 1.0.0</h1>
+        <h1 className="header">Novidades</h1>
         <div className="information">
-          <section>
-            <p>
-              Nova Versão do PDV.
-            </p>
-            <p>
-              Nova pasta do PDV.
-            </p>
-
-          </section>
+          <div className="div-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Descrição</th>
+                  <th>Versão</th>
+                  <th>Data de Lançamento</th>
+                </tr>
+              </thead>
+              {listFiles.map((file) => {
+                return <tbody key={file.id}>
+                    <tr>
+                      <td>{file.description}</td>
+                      <td>{file.version}</td>
+                      <td>{file.date}</td>
+                    </tr>
+                  </tbody>
+              })}
+            </table>
+          </div>
           {/* modal para informar a senha para redirecionamento para a página de versões do pdv */}
           <div className="modal ">
             <div className="div-password">

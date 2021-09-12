@@ -84,46 +84,48 @@ export function InsertOtherFiles() {
 
       <div className="content">
         <h1 className="header">Cadastro de Arquivos Diversos</h1>
-        <div className="form">
-          <form onSubmit={handleSubmit}>
-            <label>
-              Link:
+        <div className="information">
+          <div className="form">
+            <form onSubmit={handleSubmit}>
+              <label>
+                Link:
+              </label>
               <input 
                 type="url" 
                 placeholder="Link de download" 
                 value={link}
                 onChange={event => setLink(event.target.value)}//pegar os daddos do input
               />
-            </label>
-            <label>
-              Nome:
+              <label>
+                Nome:
+              </label>
               <input
                 type="text"
                 placeholder="Digite a descrição do arquivo" 
                 value={description}
                 onChange={event => setDescription(event.target.value)}
-                />
-            </label>
-            <label>
-              Versão:
+              />
+              <label>
+                Versão:
+              </label>
               <input 
                 type="text" 
                 placeholder="Informe a versão do arquivo" 
                 value={version}
                 onChange={event => setVersion(event.target.value)}
               />
-            </label>
-            <label>
-              Data de Lançamento:
+              <label>
+                Data de Lançamento:
+              </label>
               <input 
                 type="date"
                 value={date}
                 onChange={event => setDate(event.target.value)}
               />
-            </label>
-            <ButtonSend onSubmit={handleSubmit} />
-            <ButtonCancel />
-          </form>
+              <ButtonSend onSubmit={handleSubmit} />
+              <ButtonCancel />
+            </form>
+          </div>
         </div>
       </div>
       

@@ -140,7 +140,7 @@ export function PagePdvVersions() {
                 </tbody>
               })}
             </table>
-          </div>
+        </div>
         </div>
 
       </div>
