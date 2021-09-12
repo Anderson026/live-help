@@ -1,0 +1,48 @@
+.information {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.div-table {
+  width: 98%;
+  height: 98%;
+  border-radius: 8px;
+  overflow: auto;
+  padding: 5px;
+}
+
+.div-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.div-table th {
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: 1.2rem;
+}
+
+.div-table td {
+  font-size: 1.2rem;
+}
+
+.div-table th, td {
+  text-align: center;
+  border: 2px solid var(--orange);
+  height: 30px;
+  width: 25%;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+@media screen and (min-width: 641px) {
+  .div-table th {
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 1.4rem;
+  }
+}

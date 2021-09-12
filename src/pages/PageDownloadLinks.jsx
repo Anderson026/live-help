@@ -92,7 +92,7 @@ export function PageDownloadLinks() {
         </div>
         <div className="information">
           <section>
-            
+            <p>Para fazer o download dos arquivos basta clicar na sessão acima desejada.</p>
 
           </section>
           {/* modal para informar a senha para redirecionamento para a página de versões do pdv */}

@@ -4,6 +4,7 @@ import { ButtonSend } from "../components/ButtonSend";
 import { Link } from "react-router-dom";
 import logoLive from "../assets/logo.png";
 import "../styles/pageDownloadLinks.css";
+import "../styles/tables.css";
 
 export function PageInstallationFiles() {
   // guardando e alterando os dados no estado
@@ -112,29 +113,35 @@ export function PageInstallationFiles() {
 
           </div>
           {/* fim do menu de navegação */}
-        <div className="information">
-          <table>
-            <thead>
-              <tr>
-                <th>Baixar</th>
-                <th>Descrição</th>
-                <th>Versão</th>
-                <th>Data de Lançamento</th>
-              </tr>
-            </thead>
-            {/* usando o estado para mostrar os dados do banco de dados na tabela */}
-            {listFiles.map((file) => {
-              return <tbody key={file.id}>
-                <tr>
-                  <td>{file.link}</td>
-                  <td>{file.description}</td>
-                  <td>{file.version}</td>
-                  <td>{file.date}</td>
-                </tr>
-              </tbody>
-            })}
-          </table>
-        </div>
+          <div className="information">
+            <div className="div-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Baixar</th>
+                    <th>Descrição</th>
+                    <th>Versão</th>
+                    <th>Data de Lançamento</th>
+                  </tr>
+                </thead>
+                {/* usando o estado para mostrar os dados do banco de dados na tabela */}
+                {listFiles.map((file) => {
+                  return <tbody key={file.id}>
+                    <tr>
+                      <td>
+                        <a href={file.link}>
+                          <img className="icon" src="https://cdn-icons-png.flaticon.com/512/892/892634.png" alt="Icone de download" />
+                        </a>
+                      </td>
+                      <td>{file.description}</td>
+                      <td>{file.version}</td>
+                      <td>{file.date}</td>
+                    </tr>
+                  </tbody>
+                })}
+              </table>
+            </div>
+          </div>
 
       </div>
 
