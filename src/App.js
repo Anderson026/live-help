@@ -12,6 +12,7 @@ import { PageTefFiles } from "./pages/PageTefFiles";
 import { PageTrainingOs } from "./pages/PageTrainingOs";
 import { PageOtherFiles } from "./pages/PageOtherFiles";
 // Página de cadastros
+import { PageSecret } from "./pages/PageSecret";
 import { InsertPdvVersions } from "./pages/secret/InsertPdvVersions";
 import { InsertInstallationFiles } from "./pages/secret/InsertInstallationFiles";
 import { InsertAutomationFiles } from "./pages/secret/InsertAutomationFiles";
@@ -32,6 +33,7 @@ function App() {
         <Route path="/passwords" exact component={Passwords} />
         <Route path="/downloadlinks" exact component={PageDownloadLinks} />
         {/* rotas de cadastros de arquivos de download */}
+        <Route path="/secret" exact component={PageSecret} />
         <Route path="/secret/insertpdvversions" exact component={InsertPdvVersions} />
         <Route path="/secret/insertinstalationfiles" exact component={InsertInstallationFiles} />
         <Route path="/secret/insertautomationfiles" exact component={InsertAutomationFiles} />
