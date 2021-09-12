@@ -3,6 +3,7 @@ import firebase from "../services/firebase";
 import { ButtonSend } from "../components/ButtonSend";
 import { Link } from "react-router-dom";
 import logoLive from "../assets/logo.png";
+import "../styles/pageDownloadLinks.css";
 
 export function PagePdvVersions() {
   // guardando e alterando os dados no estado
@@ -78,27 +79,63 @@ export function PagePdvVersions() {
       </div>
 
       <div className="content">
-        <table>
-          <thead>
-            <tr>
-              <th>Baixar</th>
-              <th>Descrição</th>
-              <th>Versão</th>
-              <th>Data de Lançamento</th>
-            </tr>
-          </thead>
-          {/* usando o estado para mostrar os dados do banco de dados na tabela */}
-          {listFiles.map((file) => {
-            return <tbody key={file.id}>
+
+       {/* links de navegação */}
+       <div className="header-links">
+          <Link to="/pageinstallationfiles">
+            <div className="div-links">Arquivos de Instalção</div>
+          </Link>
+
+          <Link to="/pagepdvversions">
+            <div className="div-links">Versões PDV</div>
+          </Link>
+
+          <Link to="/pageautomationfiles">
+            <div className="div-links">Arquivos de Automação</div>
+          </Link>
+
+          <Link to="/pageprintersdrivers">
+            <div className="div-links">Drivers de impressoras</div>
+          </Link>
+
+          <Link to="/pageteffiles">
+            <div className="div-links">Arquivos tef</div>
+          </Link>
+
+          <Link to="/pagetrainingos">
+            <div className="div-links">Pops e Os</div>
+          </Link>
+
+          <Link to="/pageotherfiles">
+            <div className="div-links">Diversos</div> 
+          </Link>
+
+        </div>
+        {/* fim do menu de navegação */} 
+        <div className="information">
+          <table>
+            <thead>
               <tr>
-                <td>{file.link}</td>
-                <td>{file.description}</td>
-                <td>{file.version}</td>
-                <td>{file.date}</td>
+                <th>Baixar</th>
+                <th>Descrição</th>
+                <th>Versão</th>
+                <th>Data de Lançamento</th>
               </tr>
-            </tbody>
-          })}
-        </table>
+            </thead>
+            {/* usando o estado para mostrar os dados do banco de dados na tabela */}
+            {listFiles.map((file) => {
+              return <tbody key={file.id}>
+                <tr>
+                  <td>{file.link}</td>
+                  <td>{file.description}</td>
+                  <td>{file.version}</td>
+                  <td>{file.date}</td>
+                </tr>
+              </tbody>
+            })}
+          </table>
+        </div>
+
       </div>
 
       {/* modal para informar a senha para redirecionamento para a página de versões do pdv */}
