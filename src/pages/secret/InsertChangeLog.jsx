@@ -20,7 +20,7 @@ export function InsertChangeLog() {
     db.collection("change_log").add({
       description: description,
       version: version,
-      date, date,
+      date: date,
 
     }).then(() => {
       alert("Dados enviados com sucesso!");

@@ -26,7 +26,7 @@ export function Principle() {
   // hook para execupar a função getfiles
   useEffect(() => {
     getFiles();
-  }, []);
+  });
 
 
   // guardando o estado do que é digitado no input
