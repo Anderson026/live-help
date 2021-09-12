@@ -5,4 +5,11 @@
   color: var(--blue);
   border: 2px solid var(--blue);
   background-color: var(--white);
+  transition: 0.3s;
+}
+
+.buttonSend:hover {
+  color: var(--white);
+  background-color: var(--blue);
+  transition: 0.3s;
 }
