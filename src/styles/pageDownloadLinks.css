@@ -1,0 +1,29 @@
+
+.header-links {
+  width: 94%;
+  height: 10%;
+  border-radius: 8px;
+  /* border: 2px solid var(--orange); */
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 8px;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+
+.div-links {
+  font-size: 1.2rem;
+  color: var(--black);
+}
+
+a{
+  text-decoration: none;
+}
+
+.div-links:hover {
+    /* transition: 0.3s; */
+    border-bottom: 2px solid var(--orange);
+    color: var(--orange);
+}

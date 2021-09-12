@@ -1,30 +1,13 @@
-import { useEffect, useState } from "react";
-import firebase from "../services/firebase";
+
 import { ButtonSend } from "../components/ButtonSend";
+import { useState } from "react/cjs/react.development";
 import { Link } from "react-router-dom";
+import "../styles/principle.css";
+import "../styles/pageDownloadLinks.css";
+// import { ButtonMenuMobile } from "../components/ButtomMenuMobile";
 import logoLive from "../assets/logo.png";
 
-export function PageTrainingOs() {
-  // guardando e alterando os dados no estado
-  const [listFiles, setListFiles] = useState([]);
-  // colocando o firebase dentro de uma variável
-  const ref = firebase.firestore().collection("training_os");
-  // função para pegar todos os dados do banco e armazenar dentro de um array para e por fim salvar no estado
-  async function getFiles() {
-    ref.onSnapshot((querySnapshot) => {
-      const docs = [];
-      querySnapshot.forEach(doc => {
-        docs.push({ ...doc.data(), id: doc.id });
-      });
-      setListFiles(docs);
-
-    });
-  }
-  // hook para execupar a função getfiles
-  useEffect(() => {
-    getFiles();
-  }, []);
-
+export function PageDownloadLinks() {
   // guardando o estado do que é digitado no input
   const [password, setPassword] = useState("");
   // função para redirecionar para as páginas de pdv versões ou passwords
@@ -39,22 +22,20 @@ export function PageTrainingOs() {
         alert("Senha Inválida!");
     }
   }
-
+  
   // função para mostrar o menu mobile
   function hideOrShowMenu() {
     let divMenu = document.querySelector(".div-menu");
     divMenu.classList.toggle("active");
   }
-
   // função para mostar o modal
   function hideOrShowtModal() {
     let modal = document.querySelector(".modal");
     modal.classList.toggle("active");
   }
 
-  return(
+  return (
     <main>
-
       {/* menu mobile */}
       <div className="div-menu">
         <div className="div-logo"><img className="logo-img" src={logoLive} alt="logo da Live Sistemas" /></div>
@@ -72,48 +53,62 @@ export function PageTrainingOs() {
           <footer>Anderson Ferreira 2021</footer>
         </div>
       </div>
-
+      
+      {/* contedúdo da página */}
       <div className="content">
-        <table>
-          <thead>
-            <tr>
-              <th>Baixar</th>
-              <th>Descrição</th>
-              <th>Versão</th>
-              <th>Data de Lançamento</th>
-            </tr>
-          </thead>
-          {/* usando o estado para mostrar os dados do banco de dados na tabela */}
-          {listFiles.map((file) => {
-            return <tbody key={file.id}>
-              <tr>
-                <td>{file.link}</td>
-                <td>{file.description}</td>
-                <td>{file.version}</td>
-                <td>{file.date}</td>
-              </tr>
-            </tbody>
-          })}
-        </table>
-      </div>
+        <div className="header-links">
+          <Link to="/pageinstallationfiles">
+            <div className="div-links">Arquivos de Instalção</div>
+          </Link>
 
-      {/* modal para informar a senha para redirecionamento para a página de versões do pdv */}
-      <div className="modal ">
-        <div className="div-password">
-          <h1>Digite a senha de acesso:</h1>
-          <form className="form" onSubmit={Redirect}>
-            <input type="password"
-              required
-              value={password}
-              onChange={event => setPassword(event.target.value)}
-            />
-            <ButtonSend />
-            <button className="button-cancel" onClick={hideOrShowtModal}>Cancelar</button>
-          </form>
+          <Link to="/pagepdvversions">
+            <div className="div-links">Versões PDV</div>
+          </Link>
+
+          <Link to="/pageautomationfiles">
+            <div className="div-links">Arquivos de Automação</div>
+          </Link>
+
+          <Link to="/pageprintersdrivers">
+            <div className="div-links">Drivers de impressoras</div>
+          </Link>
+
+          <Link to="/pageteffiles">
+            <div className="div-links">Arquivos tef</div>
+          </Link>
+
+          <Link to="/pagetrainingos">
+            <div className="div-links">Pops e Os</div>
+          </Link>
+
+          <Link to="/pageotherfiles">
+            <div className="div-links">Diversos</div> 
+          </Link>
+
+        </div>
+        <div className="information">
+          <section>
+            
+
+          </section>
+          {/* modal para informar a senha para redirecionamento para a página de versões do pdv */}
+          <div className="modal ">
+            <div className="div-password">
+              <h1>Digite a senha de acesso:</h1>
+              <form className="form" onSubmit={Redirect}>
+                <input type="password"
+                  required
+                  value={password}
+                  onChange={event => setPassword(event.target.value)}
+                />
+                <ButtonSend />
+                <button className="button-cancel" onClick={hideOrShowtModal}>Cancelar</button>
+              </form>
+            </div>
+          </div>
+          {/* fim do modal */}
         </div>
       </div>
-      {/* fim do modal */}
-
       <button className="buttonMenuMobile" onClick={hideOrShowMenu}>
         {/* <img id="btnImg" src={buttonMenuMobile} alt="Icone de menu" /> */}
         <input type="checkbox" id="checkbox-menu" />

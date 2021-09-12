@@ -15,8 +15,8 @@ export function Principle() {
     switch(password) {
       case "pdvversoes":
         return window.location.href = "https://www.notion.so/Live-PDV-NFC-e-24e7948e581a4e5bbf169cdb3e9dc9ed#bc0e132694ab41a8a7c3e12fd3f07cce";
-      case "passwords":
-        return window.location.href = "http://localhost:3000/passwords";
+      case "livetutoriais":
+        return window.location.href = "http://livetutoriais.online:3300/";
       default:
         alert("Senha Inválida!");
     }
@@ -39,15 +39,13 @@ export function Principle() {
       <div className="div-menu">
         <div className="div-logo"><img className="logo-img" src={logoLive} alt="logo da Live Sistemas" /></div>
         <div className="div-buttons">
-          <Link to="/pagepdvversions">
+          <Link to="/downloadlinks">
             <div>Dowloads</div>
           </Link>
           <Link to="/passwords">
             <div>Passwords</div>
           </Link>
-          <Link to="/tutorials/01-cadastrodecolaboradores">
-            <div>Tutoriais</div>
-          </Link>
+          <div onClick={hideOrShowtModal}>Tutoriais</div>
           <div onClick={hideOrShowtModal}>Acessar Versões do PDV</div>
         </div>
         <div className="div-footer">
@@ -71,7 +69,7 @@ export function Principle() {
           {/* modal para informar a senha para redirecionamento para a página de versões do pdv */}
           <div className="modal ">
             <div className="div-password">
-              <h1>Digite aqui a sua senha de acesso:</h1>
+              <h1>Digite a senha de acesso:</h1>
               <form className="form" onSubmit={Redirect}>
                 <input type="password"
                   required

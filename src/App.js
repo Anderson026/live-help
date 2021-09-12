@@ -3,6 +3,7 @@
 import { Route, BrowserRouter, Switch } from "react-router-dom";
 import { Principle } from "./pages/Principle";
 import { Passwords } from "./pages/Passwords";
+import { PageDownloadLinks } from "./pages/PageDownloadLinks";
 import { PagePdvVersions } from "./pages/PagePdvVersions";
 import { PageInstallationFiles } from "./pages/PageInstallationFiles";
 import { PageAutomationFiles } from "./pages/PageAutomationFiles";
@@ -29,6 +30,7 @@ function App() {
       <Switch>
         <Route path="/" exact component={Principle} />
         <Route path="/passwords" exact component={Passwords} />
+        <Route path="/downloadlinks" exact component={PageDownloadLinks} />
         {/* rotas de cadastros de arquivos de download */}
         <Route path="/secret/insertpdvversions" exact component={InsertPdvVersions} />
         <Route path="/secret/insertinstalationfiles" exact component={InsertInstallationFiles} />
