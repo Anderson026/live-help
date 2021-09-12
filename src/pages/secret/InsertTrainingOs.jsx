@@ -1,6 +1,5 @@
 
 import { useState } from "react";
-import { ButtonMenuMobile } from "../../components/ButtomMenuMobile";
 import { ButtonSend } from "../../components/ButtonSend";
 import { ButtonCancel } from "../../components/ButtonCancel";
 import firebase from "../../services/firebase";
@@ -63,7 +62,11 @@ export function InsertTrainingOs() {
 
       {/* menu mobile */}
       <div className="div-menu">
-        <div className="div-logo"><img className="logo-img" src={logoLive} alt="logo da Live Sistemas" /></div>
+        <div className="div-logo">
+          <Link to="/">
+            <img className="logo-img" src={logoLive} alt="logo da Live Sistemas" />
+          </Link>
+        </div>
         <div className="div-buttons">
           <Link to="/downloadlinks">
             <div>Dowloads</div>

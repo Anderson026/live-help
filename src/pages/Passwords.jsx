@@ -64,7 +64,11 @@ function hideOrShowtModal() {
 
       {/* menu mobile */}
       <div className="div-menu">
-        <div className="div-logo"><img className="logo-img" src={logoLive} alt="logo da Live Sistemas" /></div>
+        <div className="div-logo">
+          <Link to="/">
+            <img className="logo-img" src={logoLive} alt="logo da Live Sistemas" />
+          </Link>
+        </div>
         <div className="div-buttons">
           <Link to="/downloadlinks">
             <div>Dowloads</div>
