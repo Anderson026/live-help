@@ -39,8 +39,6 @@ export function Principle() {
         return window.location.href = "https://www.notion.so/Live-PDV-NFC-e-24e7948e581a4e5bbf169cdb3e9dc9ed#bc0e132694ab41a8a7c3e12fd3f07cce";
       case "livetutoriais":
         return window.location.href = "http://livetutoriais.online:3300/";
-      case "castlevania":
-        return window.location.href = "http://localhost:3000/secret";
       default:
         alert("Senha Inválida!");
     }
@@ -77,7 +75,7 @@ export function Principle() {
           <div onClick={hideOrShowtModal}>Acessar Versões do PDV</div>
         </div>
         <div className="div-footer">
-          <footer>Anderson Ferreira 2021</footer>
+          <footer>Anderson Ferreira 2021 <Link className="linkSecret" to="/secret"><div></div></Link></footer>
         </div>
       </div>
       

@@ -82,6 +82,23 @@ main {
   text-align: center;
   color: var(--white);
   font-size: 1.4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.linkSecret {
+  text-decoration: none;
+  cursor: initial;
+}
+
+.linkSecret div {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
 }
 /* fim menu */
 /* início content */
