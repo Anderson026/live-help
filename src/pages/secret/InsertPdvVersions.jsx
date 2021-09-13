@@ -92,6 +92,7 @@ export function InsertPdvVersions() {
                 type="url" 
                 placeholder="Link de download" 
                 value={link}
+                required
                 onChange={event => setLink(event.target.value)}//pegar os daddos do input
               />
               <label>
@@ -101,6 +102,7 @@ export function InsertPdvVersions() {
                 type="text"
                 placeholder="Digite a descrição do arquivo" 
                 value={description}
+                required
                 onChange={event => setDescription(event.target.value)}
               />
               <label>
@@ -110,6 +112,7 @@ export function InsertPdvVersions() {
                 type="text" 
                 placeholder="Informe a versão do arquivo" 
                 value={version}
+                required
                 onChange={event => setVersion(event.target.value)}
               />
               <label>
@@ -118,6 +121,7 @@ export function InsertPdvVersions() {
               <input 
                 type="date"
                 value={date}
+                required
                 onChange={event => setDate(event.target.value)}
               />
               <ButtonSend onSubmit={handleSubmit} />

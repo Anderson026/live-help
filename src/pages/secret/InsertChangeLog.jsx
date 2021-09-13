@@ -94,6 +94,7 @@ export function InsertChangeLog() {
                 type="text" 
                 placeholder="Informe as mudanças" 
                 value={description}
+                required
                 onChange={event => setDescription(event.target.value)}//pegar os daddos do input
               />
               <label>
@@ -103,6 +104,7 @@ export function InsertChangeLog() {
                 type="text"
                 placeholder="Informe a versão" 
                 value={version}
+                required
                 onChange={event => setVersion(event.target.value)}
                 />
                 <label>
@@ -111,6 +113,7 @@ export function InsertChangeLog() {
               <input
                 type="date"
                 value={date}
+                required
                 onChange={event => setDate(event.target.value)}
                 />
               
