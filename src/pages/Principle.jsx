@@ -75,7 +75,7 @@ export function Principle() {
           <div onClick={hideOrShowtModal}>Acessar Versões do PDV</div>
         </div>
         <div className="div-footer">
-          <footer>Anderson Ferreira 2021 <Link className="linkSecret" to="/secret"><div></div></Link></footer>
+          <footer>Anderson Ferreira 2021</footer>
         </div>
       </div>
       

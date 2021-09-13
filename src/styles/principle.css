@@ -82,13 +82,13 @@ main {
   text-align: center;
   color: var(--white);
   font-size: 1.4rem;
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
-.linkSecret {
+/* .linkSecret {
   text-decoration: none;
   cursor: initial;
 }
@@ -99,7 +99,7 @@ main {
   position: absolute;
   bottom: 10px;
   left: 10px;
-}
+} */
 /* fim menu */
 /* início content */
 .content {

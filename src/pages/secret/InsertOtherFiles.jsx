@@ -126,7 +126,7 @@ export function InsertOtherFiles() {
                 onChange={event => setDate(event.target.value)}
               />
               <ButtonSend onSubmit={handleSubmit} />
-              <ButtonCancel />
+              <Link to="/secret"><ButtonCancel /></Link>
             </form>
           </div>
         </div>

@@ -118,7 +118,7 @@ export function InsertChangeLog() {
                 />
               
               <ButtonSend onSubmit={handleSubmit} />
-              <ButtonCancel />
+              <Link to="/secret"><ButtonCancel /></Link>
             </form>
           </div>
         </div>
