@@ -1,6 +1,6 @@
 
 import { ButtonSend } from "../components/ButtonSend";
-import { useState, useEffect } from "react/cjs/react.development";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/principle.css";
 import logoLive from "../assets/logo.png";
