@@ -10,7 +10,7 @@ export function PagePdvVersions() {
   // guardando e alterando os dados no estado
   const [listFiles, setListFiles] = useState([]);
   // colocando o firebase dentro de uma variável
-  const ref = firebase.firestore().collection("pdv_versoes");
+  const ref = firebase.firestore().collection("pdv_versions");
   // função para pegar todos os dados do banco e armazenar dentro de um array para e por fim salvar no estado
   async function getFiles() {
     ref.onSnapshot((querySnapshot) => {

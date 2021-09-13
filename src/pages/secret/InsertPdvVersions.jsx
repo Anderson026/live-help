@@ -17,7 +17,7 @@ export function InsertPdvVersions() {
     event.preventDefault();
     
     const db = firebase.firestore();
-    db.collection("pdv_versoes").add({
+    db.collection("pdv_versions").add({
       link: link,
       description: description,
       version: version,
