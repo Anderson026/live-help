@@ -136,7 +136,7 @@ export function PagePrintersDrivers() {
                       </td>
                       <td>{file.description}</td>
                       <td>{file.version}</td>
-                      <td>{file.date}</td>
+                      <td>{new Date(file.date).toLocaleDateString("pt-br", {timeZone: "UTC"})}</td>
                     </tr>
                   </tbody>
                 })}
