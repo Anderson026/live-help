@@ -45,4 +45,8 @@
     color: var(--white);
     font-size: 1.4rem;
   }
+
+  .div-table td {
+    font-size: 1.4rem;
+  }
 }
