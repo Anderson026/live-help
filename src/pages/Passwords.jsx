@@ -22,7 +22,7 @@ export function Passwords() {
   const [passwordCbc, setPasswordCbc] = useState(calculatePasswordCbc);
 
   function updatePasswords() {
-
+    document.location.reload(true);
     let update = window.addEventListener("click", () =>{
       setPasswordPosto(calculatePasswordPosto);
       setPasswordLoja(calculatePasswordLoja);
@@ -31,7 +31,6 @@ export function Passwords() {
     })
     return update;
   }
-
 // guardando o estado do que é digitado no input
 const [password, setPassword] = useState("");
 // função para redirecionar para as páginas de pdv versões ou passwords
