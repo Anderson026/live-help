@@ -76,7 +76,7 @@ export function InsertPdvVersions() {
           <div onClick={hideOrShowtModal}>Acessar Versões do PDV</div>
         </div>
         <div className="div-footer">
-          <footer>Anderson Ferreira 2021</footer>
+          <footer>Anderson Ferreira</footer>
         </div>
       </div>
 
