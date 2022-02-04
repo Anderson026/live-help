@@ -92,7 +92,7 @@ function hideOrShowtModal() {
             <div className="passwords-styles"><p>Senha do config do PDV: <span>{passwordConfig}</span></p></div>
             <div className="passwords-styles"><p>Senha do CBC 2k9: <span>{passwordCbc}</span></p></div>
             <div className="passwords-styles"><p>Senha do config da Getcard: <span>secnas256</span></p></div>
-            <div className="passwords-styles"><p>Senha do Gsurf: <span>Live202112</span></p></div>
+            <div className="passwords-styles"><p>Senha do Gsurf: <span>Live202202</span></p></div>
             
             {/* <div className="passwords-styles"> */}
               <button className="buttonUpdate" onClick={updatePasswords}>Atualizar Senhas</button>
