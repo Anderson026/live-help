@@ -19,7 +19,6 @@ export function PageInstallationFiles() {
         docs.push({ ...doc.data(), id: doc.id });
       });
       setListFiles(docs);
-
     });
   }
   // hook para execupar a função getfiles
