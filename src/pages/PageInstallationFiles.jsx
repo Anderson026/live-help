@@ -12,19 +12,17 @@ export function PageInstallationFiles() {
   // colocando o firebase dentro de uma variável
   const ref = firebase.firestore().collection("installation_files");
   // função para pegar todos os dados do banco e armazenar dentro de um array para e por fim salvar no estado
-  async function getFiles() {
+  useEffect(() => {
     ref.onSnapshot((querySnapshot) => {
       const docs = [];
       querySnapshot.forEach(doc => {
         docs.push({ ...doc.data(), id: doc.id });
       });
       setListFiles(docs);
+     
     });
-  }
-  // hook para execupar a função getfiles
-  useEffect(() => {
-    getFiles();
-  });
+  }, []);
+
 
    // guardando o estado do que é digitado no input
    const [password, setPassword] = useState("");
