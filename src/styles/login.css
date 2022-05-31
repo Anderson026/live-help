@@ -1,0 +1,42 @@
+.bg-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: var(--blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.form-div h1 {
+  color: var(--white);
+  font-size: 2.2rem;
+}
+
+.label-form {
+  display: block;
+  flex-direction: column;
+}
+
+.btn-submit {
+  width: 256px;
+  height: 50px;
+  border-radius: 8px;
+  color: var(--white);
+  font-weight: 900;
+  border: 2px solid var(--white);
+  background-color: var(--orange);
+  transition: 0.3s;
+}
+
+.btn-submit:hover {
+  color: var(--white);
+  background-color: rgb(248, 95, 6);
+  transition: 0.3s;
+}

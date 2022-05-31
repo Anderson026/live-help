@@ -6,6 +6,7 @@ import "../styles/principle.css";
 import logoLive from "../assets/logo.png";
 import firebase from "../services/firebase";
 
+
 export function Principle() {
 
   // guardando e alterando os dados no estado
@@ -37,6 +38,7 @@ export function Principle() {
         return window.location.href = "http://livetutoriais.online:3300/";
       default:
         alert("Senha Inválida!");
+        setPassword("");
     }
   }
   
@@ -56,7 +58,7 @@ export function Principle() {
       {/* menu mobile */}
       <div className="div-menu">
         <div className="div-logo">
-          <Link to="/">
+          <Link to="/principle">
             <img className="logo-img" src={logoLive} alt="logo da Live Sistemas" />
           </Link>
         </div>

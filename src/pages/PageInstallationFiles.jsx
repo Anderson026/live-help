@@ -57,7 +57,7 @@ export function PageInstallationFiles() {
       {/* menu mobile */}
       <div className="div-menu">
         <div className="div-logo">
-          <Link to="/">
+          <Link to="/principle">
             <img className="logo-img" src={logoLive} alt="logo da Live Sistemas" />
           </Link>
         </div>

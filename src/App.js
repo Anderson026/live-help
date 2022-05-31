@@ -1,6 +1,9 @@
 
 
-import { Route, BrowserRouter, Switch } from "react-router-dom";
+import { Route, BrowserRouter, Switch} from "react-router-dom";
+import StoreProvider from "./components/Store/Provider";
+import RoutesPrivate from "./components/Routes/Private/Private";
+import Login from "./pages/Login";
 import { Principle } from "./pages/Principle";
 import { Passwords } from "./pages/Passwords";
 import { PageDownloadLinks } from "./pages/PageDownloadLinks";
@@ -28,10 +31,12 @@ import { CadastroDeColaboradores } from "./pages/tutorials/CadastroDeColaborador
 function App() {
   return (
     <BrowserRouter>
+    <StoreProvider>
       <Switch>
-        <Route path="/" exact component={Principle} />
-        <Route path="/passwords" exact component={Passwords} />
-        <Route path="/downloadlinks" exact component={PageDownloadLinks} />
+        <Route path="/" exact component={Login} />
+        <RoutesPrivate path="/principle"  component={Principle} />
+        <RoutesPrivate path="/passwords"  component={Passwords} />
+        <RoutesPrivate path="/downloadlinks"  component={PageDownloadLinks} />
         {/* rotas de cadastros de arquivos de download */}
         <Route path="/secret" exact component={PageSecret} />
         <Route path="/secret/insertpdvversions" exact component={InsertPdvVersions} />
@@ -54,6 +59,7 @@ function App() {
         <Route path="/tutorials/01-cadastrodecolaboradores" exact component={CadastroDeColaboradores} />
 
       </Switch>
+    </StoreProvider>
     </BrowserRouter>
   );
 }
